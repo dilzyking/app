@@ -1,0 +1,156 @@
+{
+  "app_name": "ExoPlay",
+  "personality": "6 Glass / Luxe DARK",
+  "personality_one_liner": "A cinematic, video-first experience using liquid glass overlays and deep obsidian tones to let content shine.",
+  "color": {
+    "surface": "#0C0C0E",
+    "onSurface": "#F3F4F6",
+    "surfaceSecondary": "#1A1A1F",
+    "onSurfaceSecondary": "#D1D5DB",
+    "surfaceTertiary": "#27272F",
+    "onSurfaceTertiary": "#9CA3AF",
+    "surfaceInverse": "#F9FAFB",
+    "onSurfaceInverse": "#111827",
+    "brand": "#EAB308",
+    "brandPrimary": "#EAB308",
+    "onBrandPrimary": "#422006",
+    "brandSecondary": "#FDE047",
+    "onBrandSecondary": "#422006",
+    "brandTertiary": "#423304",
+    "onBrandTertiary": "#FDE047",
+    "success": "#10B981",
+    "onSuccess": "#064E3B",
+    "warning": "#F59E0B",
+    "onWarning": "#78350F",
+    "error": "#EF4444",
+    "onError": "#7F1D1D",
+    "info": "#6B7280",
+    "onInfo": "#F3F4F6",
+    "border": "#27272F",
+    "borderStrong": "#3F3F46",
+    "divider": "#1A1A1F"
+  },
+  "typography": {
+    "displayFontFamily": "ClashDisplay-Medium",
+    "textFontFamily": "Satoshi-Regular",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Generous padding around content, safe-area clearance at root. 44x44pt min hit targets.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 6,
+    "md": 12,
+    "lg": 20,
+    "pill": 999
+  },
+  "shadow_tier": "0",
+  "navigation": "bottom_tabs",
+  "icon_set": "Phosphor",
+  "glassmorphism": {
+    "enabled": true,
+    "do's": [
+      "Floating control pill at the bottom of the video player.",
+      "Tab bar background.",
+      "Bottom-sheet headers and drag handles.",
+      "Overlay content box on the Home hero card."
+    ],
+    "dont's": [
+      "Form fields or body text regions.",
+      "Every single list row or card.",
+      "Without a tinted base underneath."
+    ]
+  },
+  "haptics": {
+    "events": {
+      "play_pause_toggle": "impactMedium",
+      "seek_commit": "impactLight",
+      "double_tap_skip": "impactMedium",
+      "quality_select": "selection",
+      "tab_press": "selection"
+    }
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "expo-blur",
+      "android": "expo-blur",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "expo-blur",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Home",
+      "purpose": "Curated library of DASH sample streams with anticipatory shelves and a prominent cinematic hero card.",
+      "states": {
+        "loading": "Skeleton cards mimicking grid with pulse animation.",
+        "empty": "No streams available. Illustration with reload CTA.",
+        "error": "Failed to load streams. Show 'Try Again' button."
+      },
+      "layout": "1. Header: Transparent with brand wordmark. 2. Hero Section: Full-bleed image card. Gradient scrim (top->bottom transparent to surface) MUST sit over image. Glassmorphic content box (Title, DRM badge, Play button) at bottom 30%. 3. Scrollable chip row (SD, HD, DRM). 4. Horizontal shelves for categories (Because you watched, Trending). 5. Floating ABC (Always Be Continuing) mini-player above the tab bar if a video was playing."
+    },
+    {
+      "name": "Player",
+      "purpose": "Immersive, gesture-driven video playback interface for DASH/MPD streams.",
+      "states": {
+        "loading": "Centered loading spinner on black background.",
+        "empty": "N/A",
+        "error": "Readable error message indicating stream or DRM failure + Retry CTA."
+      },
+      "layout": "1. Base: Full-screen video surface. 2. Gesture Area: Double tap left/right to skip 10s. Tap center to toggle controls. 3. Overlay: Absolute filled. Top header with back button and settings icon (glass pill). 4. Bottom Control Bar: Floating glass pill above safe-area bottom containing Play/Pause, current time, seek bar slider, total time, subtitle icon, fullscreen toggle. 5. Controls use Reanimated to fade out after 3s of inactivity."
+    },
+    {
+      "name": "StreamDetailsSheet",
+      "purpose": "Draggable bottom sheet showing stream metadata, quality selection, and subtitle tracks.",
+      "states": {
+        "loading": "Spinner",
+        "empty": "No extra details available.",
+        "error": "Failed to load stream info."
+      },
+      "layout": "Gorhom bottom-sheet popping up over Home or Player. Glassmorphic header with drag handle. Scrollable list of selectable options (Quality: Auto, 4K, 1080p | Speed: 1x, 1.5x) using surfaceSecondary for rows and brandPrimary checkmarks for selected items."
+    }
+  ],
+  "images": {
+    "hero_thumbnail": {
+      "url": "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxjaW5lbWF0aWMlMjBzY2ktZmklMjBtb3ZpZSUyMHBvc3RlciUyMDRrfGVufDB8fHx8MTc4MzA3MzI2N3ww&ixlib=rb-4.1.0&q=85",
+      "alt": "Cinematic sci-fi poster for Tears of Steel DASH sample"
+    },
+    "thumbnail_nature": {
+      "url": "https://images.unsplash.com/photo-1466971060667-16467c7d04ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwxfHxiZWF1dGlmdWwlMjBuYXR1cmUlMjBsYW5kc2NhcGUlMjA0ayUyMGRvY3VtZW50YXJ5fGVufDB8fHx8MTc4MzA3MzI2N3ww&ixlib=rb-4.1.0&q=85",
+      "alt": "Beautiful nature landscape for 4K sample"
+    },
+    "thumbnail_animation": {
+      "url": "https://images.unsplash.com/photo-1702485581927-4337697bd723?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwxfHwzZCUyMGFuaW1hdGlvbiUyMGNoYXJhY3RlciUyMG1vdmllJTIwZnJhbWV8ZW58MHx8fHwxNzgzMDczMjY3fDA&ixlib=rb-4.1.0&q=85",
+      "alt": "3D Animation character for Big Buck Bunny sample"
+    },
+    "logo_icon": {
+      "url": "https://images.unsplash.com/photo-1638864616270-64041b699a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYWJzdHJhY3QlMjBwbGF5JTIwYnV0dG9uJTIwbG9nb3xlbnwwfHx8fDE3ODMwNzMyNjd8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Minimalist abstract play button logo"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Core Requirement: Use `react-native-video` (v6+) for MPEG-DASH and DRM (Widevine/ClearKey) support. Standard Expo AV cannot play DASH/DRM streams natively.",
+    "Home Hero Image: MUST have a gradient scrim (top to bottom, transparent to surface) between the image and overlaid text. Place the title and play button in the bottom 30%.",
+    "Player Controls Overlay: Use `react-native-reanimated` to smoothly fade controls in and out based on user taps or a 3-second inactivity timeout. Do not use standard RN Animation.",
+    "Player Interactivity: Use `react-native-gesture-handler` for double-tap to skip (left/right sides of screen) and smooth seek bar sliding.",
+    "Glassmorphism: Use `expo-blur` with a translucent tinted base underneath (≥70% of surface) to ensure text readability on player floating controls and tab bar.",
+    "Haptics: Add subtle haptic feedback (using expo-haptics) on quality selection, play/pause toggle, and double-tap skips."
+  ]
+}
