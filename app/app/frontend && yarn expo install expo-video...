@@ -1,0 +1,33 @@
+
+Action: $ cd /app/frontend && yarn expo install expo-video expo-blur @gorhom/bottom-sheet expo-haptics 2>&1 | tail -30
+Observation: warning "react-native > babel-jest > babel-preset-jest > babel-preset-current-node-syntax > @babel/plugin-syntax-class-static-block@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "react-native > babel-jest > babel-preset-jest > babel-preset-current-node-syntax > @babel/plugin-syntax-import-attributes@7.29.7" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "react-native > babel-jest > babel-preset-jest > babel-preset-current-node-syntax > @babel/plugin-syntax-import-meta@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "react-native > babel-jest > babel-preset-jest > babel-preset-current-node-syntax > @babel/plugin-syntax-json-strings@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "react-native > babel-jest > babel-preset-jest > babel-preset-current-node-syntax > @babel/plugin-syntax-logical-assignment-operators@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "react-native > babel-jest > babel-preset-jest > babel-preset-current-node-syntax > @babel/plugin-syntax-numeric-separator@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "react-native > babel-jest > babel-preset-jest > babel-preset-current-node-syntax > @babel/plugin-syntax-object-rest-spread@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "react-native > babel-jest > babel-preset-jest > babel-preset-current-node-syntax > @babel/plugin-syntax-optional-catch-binding@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "react-native > babel-jest > babel-preset-jest > babel-preset-current-node-syntax > @babel/plugin-syntax-private-property-in-object@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "react-native > babel-jest > babel-preset-jest > babel-preset-current-node-syntax > @babel/plugin-syntax-top-level-await@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning " > react-native-dotenv@3.4.11" has unmet peer dependency "@babel/runtime@^7.20.6".
+warning " > react-native-reanimated@4.1.1" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning " > react-native-worklets@0.5.1" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "react-native-worklets > @babel/plugin-transform-template-literals@7.29.7" has unmet peer dependency "@babel/core@^7.0.0-0".
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 5 new dependencies.
+info Direct dependencies
+├─ @gorhom/bottom-sheet@5.2.14
+├─ expo-blur@15.0.8
+├─ expo-haptics@15.0.8
+└─ expo-video@3.0.16
+info All dependencies
+├─ @gorhom/bottom-sheet@5.2.14
+├─ @gorhom/portal@1.0.14
+├─ expo-blur@15.0.8
+├─ expo-haptics@15.0.8
+└─ expo-video@3.0.16
+› Added config plugin: expo-video
+Done in 4.86s.
+Exit code: 0
