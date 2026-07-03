@@ -1,0 +1,52 @@
+
+Action: file_editor create /app/frontend/app.json --file-text "{
+  \"expo\": {
+    \"name\": \"ExoPlay\",
+    \"slug\": \"exoplay\",
+    \"version\": \"1.0.0\",
+    \"orientation\": \"portrait\",
+    \"icon\": \"./assets/images/icon.png\",
+    \"scheme\": \"exoplay\",
+    \"userInterfaceStyle\": \"dark\",
+    \"newArchEnabled\": true,
+    \"ios\": {
+      \"supportsTablet\": true
+    },
+    \"android\": {
+      \"adaptiveIcon\": {
+        \"foregroundImage\": \"./assets/images/adaptive-icon.png\",
+        \"backgroundColor\": \"#000000\"
+      },
+      \"edgeToEdgeEnabled\": true
+    },
+    \"web\": {
+      \"bundler\": \"metro\",
+      \"output\": \"single\",
+      \"favicon\": \"./assets/images/favicon.png\"
+    },
+    \"plugins\": [
+      \"expo-router\",
+      [
+        \"expo-splash-screen\",
+        {
+          \"image\": \"./assets/images/splash-image.png\",
+          \"imageWidth\": 200,
+          \"resizeMode\": \"contain\",
+          \"backgroundColor\": \"#000000\"
+        }
+      ],
+      [
+        \"expo-video\",
+        {
+          \"supportsBackgroundPlayback\": true,
+          \"supportsPictureInPicture\": true
+        }
+      ]
+    ],
+    \"experiments\": {
+      \"typedRoutes\": true
+    }
+  }
+}
+"
+Observation: Overwrite successful: /app/frontend/app.json
